@@ -1,0 +1,133 @@
+{
+  "updatedAt": "2026-09-14T10:30:00.000Z",
+  "items": [
+    {
+      "id": "v01",
+      "title": "(주)에스피시스템스 Company Profile",
+      "desc": "국문 회사소개 영상 · 최신판. 고객사 미팅 오프닝에 쓰십니다.",
+      "youtubeId": "R4eVff8bjRs",
+      "kind": "promo",
+      "order": 10
+    },
+    {
+      "id": "v02",
+      "title": "SP Systems Company Profile (EN)",
+      "desc": "영문 버전. 해외 고객사·바이어 미팅용.",
+      "youtubeId": "E1LD77EaHBA",
+      "kind": "promo",
+      "order": 20
+    },
+    {
+      "id": "v03",
+      "title": "SP Systems Company Profile (CN)",
+      "desc": "중문 버전. 중국 고객사 미팅용.",
+      "youtubeId": "M4mJ-XuxXuM",
+      "kind": "promo",
+      "order": 30
+    },
+    {
+      "id": "v04",
+      "title": "SP Systems Company Profile (JP)",
+      "desc": "일문 버전. 일본 고객사 미팅용.",
+      "youtubeId": "6YNB6dspuz0",
+      "kind": "promo",
+      "order": 40
+    },
+    {
+      "id": "v05",
+      "title": "SPSYSTEMS PR VIDEO (KR, 2021)",
+      "desc": "2021년 제작 국문 홍보영상. 이전 버전 자료로 보관합니다.",
+      "youtubeId": "p5rcNCarcUc",
+      "kind": "promo",
+      "order": 50
+    },
+    {
+      "id": "v06",
+      "title": "에스피시스템스 스마트팩토리",
+      "desc": "ICT 사업부문 스마트팩토리 소개 영상.",
+      "youtubeId": "0jiNKyJSBkk",
+      "kind": "promo",
+      "order": 60
+    },
+    {
+      "id": "v11",
+      "title": "열처리기용 갠트리 자동화",
+      "desc": "열처리 공정 갠트리 자동화 사례. 채널 내 최다 조회 영상입니다.",
+      "youtubeId": "HVuMQw_VW0A",
+      "kind": "result",
+      "order": 10
+    },
+    {
+      "id": "v12",
+      "title": "클린룸용 갠트리 로봇",
+      "desc": "클린룸 환경 적용 갠트리 로봇 사례.",
+      "youtubeId": "pe1Zt0DOl-o",
+      "kind": "result",
+      "order": 20
+    },
+    {
+      "id": "v13",
+      "title": "창고(셔틀) 5G 융합서비스 자동창고 시스템",
+      "desc": "5G 융합 셔틀형 자동창고 구축 사례.",
+      "youtubeId": "Q5TfRsJ_m6w",
+      "kind": "result",
+      "order": 30
+    },
+    {
+      "id": "v14",
+      "title": "자동차 부품 제조 자동화 시스템",
+      "desc": "자동차부품 제조 라인 자동화 사례.",
+      "youtubeId": "ze4YRDHtzPY",
+      "kind": "result",
+      "order": 40
+    },
+    {
+      "id": "v15",
+      "title": "갠트리 로봇 자동화 시스템 · 타이어 자동 창고",
+      "desc": "타이어 팔레타이징 및 자동창고 사례.",
+      "youtubeId": "OyNeR_hMFU8",
+      "kind": "result",
+      "order": 50
+    },
+    {
+      "id": "v16",
+      "title": "갠트리 로봇 자동화 시스템 · P-BOX 자동 창고",
+      "desc": "P-BOX 팔레타이징 및 자동창고 사례.",
+      "youtubeId": "i4LbmsUHCIA",
+      "kind": "result",
+      "order": 60
+    },
+    {
+      "id": "v17",
+      "title": "프리캐스트 콘크리트(PC) 셔터링 & 디셔터링 자동화 시스템",
+      "desc": "건설 PC 부재 생산 자동화 사례.",
+      "youtubeId": "GDApd_Ome6w",
+      "kind": "result",
+      "order": 70
+    },
+    {
+      "id": "v18",
+      "title": "취부·용접·사상 공정 AMR 기반 자동화 솔루션",
+      "desc": "AMR 연계 용접 공정 자동화. 최신 솔루션 영상입니다.",
+      "youtubeId": "8n_SC8Fex24",
+      "kind": "result",
+      "order": 80
+    },
+    {
+      "id": "v19",
+      "title": "SPSYSTEMS 협동로봇을 활용한 초음파측정기 자동화 적용실적",
+      "desc": "협동로봇 검사 공정 적용 사례.",
+      "youtubeId": "YCZd2B8kmsM",
+      "kind": "result",
+      "order": 90
+    },
+    {
+      "id": "v20",
+      "title": "갠트리 로봇 창고 자동화 시스템",
+      "desc": "갠트리 기반 창고 자동화 종합 사례.",
+      "youtubeId": "KD9o4RBlhyk",
+      "kind": "result",
+      "order": 100
+    }
+  ]
+}
