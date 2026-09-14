@@ -609,7 +609,9 @@ body[data-brief="on"] table{font-size:.875rem}
     return { code: "gh", status: status, message: msg };
   }
 
-  /* 데이터 JSON 저장: 항상 최신 sha를 읽어 덮어씀 */
+  /* 데이터 JSON 저장: 항상 최신 sha를 읽어 덮어씀.
+     저장 성공 시 화면을 로컬 상태로 즉시 갱신한다. Pages 재빌드가 끝나기 전에
+     다시 fetch하면 옛 JSON을 받아 화면이 되돌아가기 때문이다. */
   function saveJson(name, obj, message) {
     var path = "data/" + name + ".json";
     return ghGet(path).then(function (cur) {
@@ -617,8 +619,15 @@ body[data-brief="on"] table{font-size:.875rem}
       var txt = JSON.stringify(obj, null, 2) + "\n";
       return ghPut(path, b64FromText(txt), cur && cur.sha, message);
     }).then(function () {
-      toast("깃허브에 저장했습니다. 사이트 반영까지 30초~1분 걸립니다.", 5000);
+      applyLocal(name, obj);
+      renderAll();
+      toast("깃허브에 저장했습니다. 공개 사이트 반영까지 30초~1분 걸립니다.", 5000);
     });
+  }
+  function applyLocal(name, obj) {
+    if (name === "company") state.company = obj;
+    else if (name === "videos") state.videos = (obj.items || []).slice().sort(byOrder);
+    else if (name === "files") state.files = (obj.items || []).slice().sort(byOrder);
   }
 
   /* ---------------- 읽기 ---------------- */
@@ -875,7 +884,7 @@ body[data-brief="on"] table{font-size:.875rem}
     $("scrim").addEventListener("mousedown", function (e) { if (e.target.id === "scrim") closeModal(); });
     $("mSave").addEventListener("click", function () {
       var btn = $("mSave"); btn.disabled = true; btn.textContent = "저장 중…";
-      Promise.resolve().then(onSave).then(function () { closeModal(); loadAll(); })
+      Promise.resolve().then(onSave).then(closeModal)
         ["catch"](function (err) {
           btn.disabled = false; btn.textContent = saveLabel || "저장";
           toast((err && err.message) || "저장하지 못했습니다.", 6000);
@@ -1076,8 +1085,7 @@ body[data-brief="on"] table{font-size:.875rem}
       items.push(row);
       return saveJson("files", { items: items }, "자료 등록: " + safe);
     }).then(function () {
-      toast("올렸습니다. 제목과 설명은 ‘수정’에서 다듬을 수 있습니다. 사이트 반영까지 30초~1분.", 6000);
-      loadAll();
+      toast("올렸습니다. 제목과 설명은 ‘수정’에서 다듬을 수 있습니다. 공개 사이트 반영까지 30초~1분.", 6000);
     })["catch"](function (err) {
       toast((err && err.message) || "업로드에 실패했습니다.", 6000);
     });
