@@ -129,3 +129,21 @@ git log --oneline           # 이력 확인
 git revert <커밋>            # 특정 수정 취소
 git push
 ```
+
+## Vercel로 배포하기 (GitHub Pages 대신 또는 함께)
+
+이 저장소는 빌드가 필요 없는 정적 사이트라 Vercel에 그대로 붙습니다.
+
+1. <https://vercel.com/new> → **Import Git Repository** → 이 저장소 선택
+2. Framework Preset: `Other` · Build Command: 비움 · Output Directory: 비움 (루트 그대로 서빙)
+3. **Deploy**
+
+`https://<프로젝트>.vercel.app` 으로 열립니다. 이후 `git push` 나 관리자 화면 수정(= 커밋)이 들어오면 자동 재배포되고, GitHub Pages보다 빠르게 반영됩니다.
+
+`vercel.json` 이 캐시 정책을 지정합니다 — `data/*.json` 은 매번 검증(수정이 바로 보이도록), `files/*` 는 1시간 캐시.
+
+GitHub Pages와 Vercel은 같은 저장소에 동시에 붙일 수 있습니다. 두 주소가 같은 내용을 서빙합니다.
+
+### 요금제 주의
+
+Vercel **Hobby(무료)는 약관상 비상업적 용도 전용**이며, 자사 제품·서비스를 홍보하는 사이트는 상업적 이용으로 분류되어 **Pro($20/월)** 가 필요합니다. GitHub Pages는 이런 제약이 없습니다.
